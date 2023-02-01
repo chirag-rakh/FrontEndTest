@@ -1,0 +1,38 @@
+:root{
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 2em;
+    border: 1px red solid;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.links a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    padding-inline: 1em;
+}
