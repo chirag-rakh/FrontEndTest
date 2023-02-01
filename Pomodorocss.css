@@ -18,9 +18,10 @@ html, body {
     flex-direction: row;
     width: auto;
     flex-wrap: wrap;
-    justify-content:space-between;
-    padding: 2em;
-    border: 1px red solid;
+    justify-content:space-between; /*it distributes items with equal length*/
+    padding: 1em 5%;
+    border-bottom: 1px solid black;
+    align-items: center; /*it alligns items center vertically*/
 }
 
 .logo{
@@ -35,4 +36,159 @@ html, body {
     text-transform: capitalize;
     color: black;
     padding-inline: 1em;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
 }
+
+#signupbtn{
+    padding: 1em 2em;
+    background: none;
+    border-radius: 0.3em;
+    border-width: 2px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#signupbtn:hover{
+    cursor: pointer;
+}
+
+.herobanner{
+    background-image: url(images/productivity-hacks.jpg);
+    background-size: cover; /* adjust the size of the image */
+    background-repeat: no-repeat; /* don't repeat the image */
+    background-position: center; /* center the image */
+    height: 41em;
+}
+
+.herotext{
+    display: block;
+    float: right;
+    margin-right: 10%;
+    margin-top: 10em;
+    width: 30%;
+}
+
+#heroheading{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 1em;
+    font-size: 5rem;
+}
+
+#herosubtext{
+    margin-right: 20%;
+    
+}
+
+
+/*start of main comtainer*/
+
+.maincontent{
+    background-image: url(images/timer.jpg);
+    background-size: cover; /* adjust the size of the image */
+    background-repeat: no-repeat; /* don't repeat the image */
+    background-position: center; /* center the image */
+    height: 41em;
+    color: aliceblue;
+}
+
+.pomodoro{
+    padding: 10em 10em;
+    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px ;
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 50px;
+}
+.timer p{
+    padding-inline: 0.15em;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 10em;
+    height: 180px;
+    margin-inline: auto;
+
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    padding: 1.2em;
+    text-align: center;
+}
+
+.footer .logo{
+    padding-bottom: 2em;
+}
+
+.line{
+    height: 1px;
+    background-color: white;
+    opacity: 0.5;
+    width: 50%;
+    margin-inline: auto;
+}
+
+.footertext{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em;
+    width: 20%;
+    margin-inline: auto;
+}
+
+/*button css*/
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    overflow: hidden;
+    transition: 0.s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }

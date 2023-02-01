@@ -21,13 +21,53 @@
         <div class="header">
             <div class="logo">Pomodoro</div>
             <div class="links">
-                <a href="#">link1</a>
-                <a href="#">link2</a>
-                <a href="#">link3</a>
+                <a href="#">Why Pomodoro</a>
+                <a href="#">About us</a>
+                <!--<a href="#">link3</a>-->
             </div>
             <div class="signup">
                 <button id="signupbtn">Sign Up</button>
             </div>
+        </div>
+        <div class="herobanner">
+            <div class="herotext">
+                <p id="heroheading">Increase your productivity</p>
+                <p id="herosubtext">Attainment of higher productivity is one of the main aims of any business enterprise. 
+                    Higher productivity ensures lesser cost of production, 
+                    higher production and most effective utilisation of available resources.</p>
+            </div>
+        </div>
+        <div class="maincontent">
+            <div class="pomodoro">
+                <div class="timer">
+                    <p id="minutes">25</p>
+                    <p>:</p>
+                    <p id="seconds">00</p>
+                </div>
+                <div class="controls">
+                        <button data-text="Awesome" class="button" id="start" onclick="start()">
+                            <span class="actual-text">&nbsp;start&nbsp;</span>
+                            <span class="hover-text" aria-hidden="true">&nbsp;start&nbsp;</span>
+                        </button>
+                        <button data-text="Awesome" class="button">
+                            <span class="actual-text">&nbsp;stop&nbsp;</span>
+                            <span class="hover-text" aria-hidden="true">&nbsp;stop&nbsp;</span>
+                        </button>
+                        <button data-text="Awesome" class="button">
+                            <span class="actual-text">&nbsp;reset&nbsp;</span>
+                            <span class="hover-text" aria-hidden="true">&nbsp;reset&nbsp;</span>
+                        </button>
+                </div>
+            </div>
+            <div class="timerimg"></div>
+        </div>
+        <div class="footer">
+            <div class="logo">Pomodoro</div>
+            <div class="line"></div>
+            <div class="footertext">
+                <p>&copy; 2023</p> 
+                <p>Privacy Terms</p>
+            </div>    
         </div>
     </body>
 </html>
