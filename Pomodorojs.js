@@ -1,5 +1,5 @@
 //variables
-let workTime = 25;
+let workTime = 1;
 let breakTime = 5;
 
 let seconds = "00"
@@ -13,7 +13,7 @@ window.onload = () =>{
 
 function start(){
     //change the time
-    seconds = 59;
+    seconds = 5;
 
     //disable the start button
     document.getElementById("start").disabled = true;
@@ -27,16 +27,8 @@ function start(){
     //countdown
     let timerFunction = () =>{
         //change the display
-       /* if(workMinutes / 10 < 1){
-            document.getElementById('minutes').innerHTML = "0" + workMinutes;
-            if(workSeconds / 10 < 1){
-                document.getElementById('seconds').innerHTML = "0" + seconds;
-            }
-        }
-        else{*/
             document.getElementById('minutes').innerHTML = workMinutes;
             document.getElementById('seconds').innerHTML = seconds;
-    /*}*/
         
 
         //start
@@ -47,9 +39,9 @@ function start(){
             if(workMinutes === -1){
                 if(breakCount % 2 === 0){
                     //start break
-                    alert('Break has started');
                     workMinutes = breakMinutes;
                     breakCount++;
+                    alert('Break has started');
                 }else{
                     //continue work
                     workMinutes = workTime;
@@ -73,5 +65,6 @@ function stop(){
 }
 
 function signupbtn(){
-    alert('This feature is yet to come!!');
+    alert('This feature will arrive soon!!');
 }
+

@@ -192,3 +192,29 @@ html, body {
     width: 100%;
     filter: drop-shadow(0 0 23px var(--animation-color))
   }
+
+
+  /*Why Pomodoro page*/
+
+  .container{
+    margin: auto;
+    width: 60%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 50px;
+  }
+  p {
+    line-height: 5rem;
+    font-size: 18px;
+    margin: 20px;
+    text-align: justify;
+  }
+  .highlight {
+    background-color: lightyellow;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+  }
