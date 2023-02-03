@@ -1,6 +1,7 @@
 //variables
-let workTime = 1;
+let workTime = 25;
 let breakTime = 5;
+let breakCounter = 0; //how many breaks are used
 
 let seconds = "00"
 
@@ -13,16 +14,19 @@ window.onload = () =>{
 
 function start(){
     //change the time
-    seconds = 5;
+    seconds = 59;
 
     //disable the start button
     document.getElementById("start").disabled = true;
+    document.getElementById('active').style = "display:block;";
+    document.getElementById('active').innerHTML = "Work";
+    
 
 
     let workMinutes = workTime - 1;
     let breakMinutes = breakTime - 1;
 
-    breakCount = 0;
+    let breakCount = 0;
 
     //countdown
     let timerFunction = () =>{
@@ -41,11 +45,19 @@ function start(){
                     //start break
                     workMinutes = breakMinutes;
                     breakCount++;
-                    alert('Break has started');
+                    var myWindow = window.open("", "MsgWindow", "width=600px,height=300px");
+                    myWindow.document.write("<p style='font-size:4rem;margin:1em;padding:0.1em;text-align:center;'>It's Break Time</p>");
+                    document.getElementById('active').innerHTML = "Break";
+                    breakCounter++;
+                    document.getElementById('breakcounter').innerHTML = "Number of breaks : " + breakCounter;
                 }else{
                     //continue work
+                    document.getElementById('active').innerHTML = "Work";
+                    var myWindow = window.open("", "MsgWindow", "width=600px,height=300px");
+                    myWindow.document.write("<p style='font-size:4rem;margin:1em;padding:0.1em;text-align:center;'>Time To Work</p>");
                     workMinutes = workTime;
                     breakCount++;
+
                 }
             }
             seconds = 59;
@@ -67,4 +79,3 @@ function stop(){
 function signupbtn(){
     alert('This feature will arrive soon!!');
 }
-

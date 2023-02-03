@@ -24,6 +24,11 @@ html, body {
     align-items: center; /*it alligns items center vertically*/
 }
 
+.logo a{
+    text-decoration: none;
+    color: unset;
+}
+
 .logo{
     text-transform: uppercase;
     font-size: large;
@@ -199,22 +204,63 @@ html, body {
   .container{
     margin: auto;
     width: 60%;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 4em;
   }
 
-  h1 {
+  .container h1 {
     text-align: center;
     font-size: 36px;
     margin-top: 50px;
   }
-  p {
-    line-height: 5rem;
+  .container p {
+    line-height: 4rem;
     font-size: 18px;
     margin: 20px;
     text-align: justify;
   }
-  .highlight {
+  .container .highlight {
     background-color: lightyellow;
     padding: 10px;
     border-radius: 10px;
     margin: 20px;
+  }
+
+  /*Active (Work or Break)*/
+  #active{
+    display: none;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  /*Break counter*/
+  #breakcounter{
+    text-align: center;
+    padding: 10%;
+  }
+
+  /*Message window */
+
+  .msgwindow{
+    font-size:4rem;
+    margin:1em;
+    padding:0.1em;
+    text-align:center;
+  }
+
+  /*Unordered List*/
+  ul{
+    list-style-position: inside;
+  }
+
+  ul li{
+    line-height: 6rem;
+    font-family: sans-serif;
+    margin-left: 10%;
+  }
+
+  /*line at the end of why pomodoro page*/
+  .whypomodoroline{
+    border-top: 2px solid black;
+    height: 50px;
   }
