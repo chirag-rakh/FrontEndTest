@@ -73,20 +73,22 @@ html, body {
     width: 30%;
 }
 
-#heroheading{
+.heroheading{
     text-transform: uppercase;
     font-family: sans-serif;
     margin-bottom: 1em;
     font-size: 5rem;
+    -webkit-text-stroke: 1px white;
 }
 
-#herosubtext{
+.herosubtext{
     margin-right: 20%;
-    
+    line-height: 3rem;
+    -webkit-text-stroke: 0.1px rgb(101, 101, 255);
 }
 
 
-/*start of main comtainer*/
+/*start of main container*/
 
 .maincontent{
     background-image: url(images/timer.jpg);
@@ -100,8 +102,6 @@ html, body {
 .pomodoro{
     padding: 10em 10em;
     width: 50%;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 
 .timer{
@@ -112,6 +112,7 @@ html, body {
     font-weight: 600;
     font-size: 4rem;
     margin-bottom: 50px;
+    margin-inline: auto;
 }
 .timer p{
     padding-inline: 0.15em;
@@ -208,12 +209,12 @@ html, body {
     padding-bottom: 4em;
   }
 
-  .container h1 {
+  .container h1, .abtuscontainer h1{
     text-align: center;
     font-size: 36px;
     margin-top: 50px;
   }
-  .container p {
+  .container p, .abtuscontainer p {
     line-height: 4rem;
     font-size: 18px;
     margin: 20px;
@@ -225,6 +226,18 @@ html, body {
     border-radius: 10px;
     margin: 20px;
   }
+
+  /*About us page*/
+  .abtuscontainer{
+    margin-top: 50px;
+    margin-inline: auto;
+    padding:2rem 0;
+    width: 60%;
+    background-color: rgb(221, 255, 248);
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  /*main page*/
 
   /*Active (Work or Break)*/
   #active{
@@ -263,4 +276,165 @@ html, body {
   .whypomodoroline{
     border-top: 2px solid black;
     height: 50px;
+  }
+
+
+  /*Mobile Compatible*/
+
+  @media screen and (max-width: 1285px){
+    .container, .abtuscontainer{
+      width: 70%;
+    }
+
+    .container h1, .abtuscontainer h1{
+      font-size: 28px;
+    }
+
+    .container p, .abtuscontainer p{
+      font-size: 17px;
+    }
+  }
+
+  @media screen and (max-width: 1010px) {
+    .herobanner .herotext{
+      width: 40%;
+      margin-right: 5%;
+    }
+
+    .herobanner{
+      background-position-x: right;
+    }
+
+    .pomodoro{
+      margin-inline: auto;
+      padding: 10em 2em;
+    }
+
+    .maincontent .pomodoro .controls{
+      display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-bottom: 50px;
+    margin-inline: auto;
+    }
+
+    .footer .line{
+      width: 80%;
+    }
+
+    .footer .footertext{
+      width: 40%;
+    }
+
+    /*why pomodoro page*/
+    .container, .abtuscontainer{
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .herobanner .herotext{
+      width: 60%;
+      margin-right: 10%;
+    }
+
+    .herobanner{
+      background-position-x: right;
+    }
+
+    .container, .abtuscontainer{
+      width: 90%;
+    }
+
+    .container h1, .abtuscontainer h1{
+      font-size: 25px;
+    }
+
+    .container p, .abtuscontainer p{
+      font-size: 16px;
+      line-height: 3.5rem;
+    }
+
+    .container ul li{
+      font-size: 16px;
+      line-height: 4rem;
+    }
+  }
+
+
+  @media screen and (max-width: 599px) {
+    .header{
+      flex-direction: column;
+      height: 12em;      
+    }
+
+    .herobanner .herotext {
+      padding-top:2rem;
+      margin-inline: auto;
+      float: left;
+      width: auto;
+      margin: 2rem;
+    }
+
+    .footer .footertext{
+      width: 60%;
+    }
+
+    .pomodoro{
+      padding: 10em 0;
+    }
+
+    .container h1, .abtuscontainer h1{
+      font-size: 24px;
+    }
+
+    .container p, .abtuscontainer p{
+      font-size: 15px;
+      line-height: 3rem;
+    }
+
+    .container ul li{
+      line-height: 3.5rem;
+      font-size: 15px;
+    }
+
+  }
+
+  @media screen and (max-width: 410px){
+    .heroheading{
+      font-size: 4rem;
+    }
+
+    .footer .footertext{
+      width: 80%;
+    }
+
+    .container h1, .abtuscontainer h1{
+      font-size: 22px;
+    }
+
+    .container p, .abtuscontainer p{
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 340px){
+    .header .links{
+      display: flex;
+      align-items: center;
+      justify-content:space-evenly;
+      height: 6rem;
+      flex-direction: column;
+    }
+    .heroheading{
+      font-size: 3rem;
+    }
+
+    .pomodoro{
+      width: fit-content;
+    }
+
+    .footer .footertext{
+      width: auto;
+    }
   }
