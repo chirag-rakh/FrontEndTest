@@ -1,5 +1,5 @@
 //variables
-let workTime = 4;
+let workTime = 5;
 let breakTime = 1;
 let breakCounter = 0; //how many breaks are used
 
@@ -8,7 +8,6 @@ let seconds = "00"
 
 //display
 window.onload = () =>{
-    workTime = 5;
     document.getElementById('minutes').innerHTML = workTime;
     document.getElementById('seconds').innerHTML = seconds;
 }
@@ -16,15 +15,18 @@ window.onload = () =>{
 function start(){
     //change the time
     seconds = 5;
+    workTime=workTime-1;
 
     //disable the start button
     document.getElementById("start").disabled = true;
+
+    //work tag active
     document.getElementById('active').style = "display:block;";
     document.getElementById('active').innerHTML = "Work";
     
 
 
-    let workMinutes = workTime - 2;
+    let workMinutes = workTime;
     let breakMinutes = breakTime - 1;
 
     let breakCount = 0;
